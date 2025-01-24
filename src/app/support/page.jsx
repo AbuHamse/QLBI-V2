@@ -1,14 +1,14 @@
 "use client"
 
 import { useState } from "react"
-import { Send } from "lucide-react"
+import {FiSend} from "react-icons/fi"
 
 export default function Support() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     // Handle form submission here
     console.log("Form submitted:", { name, email, message })
@@ -71,7 +71,7 @@ export default function Support() {
             type="submit"
             className="bg-[#0A4958] text-white px-6 py-3 rounded-full hover:bg-[#0A4958]/80 transition-colors flex items-center justify-center"
           >
-            <Send size={18} className="mr-2" />
+            <FiSend size={18} className="mr-2" />
             Send Message
           </button>
         </form>
